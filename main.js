@@ -25,3 +25,14 @@ window.onload = () => {
 
     getData(tbody, cancion, artista, tono)
 };
+
+async function gerData(tbody, cancion, artista, tono) {
+    await axios.get(url + "es").then((data) => {
+        canciones = data.data;
+        tbody.innerHTML = "";
+        console.log(canciones)
+        canciones.forEach((c, i) => {
+            tbody.innerHTML += `
+        })
+    })
+} 
